@@ -1,4 +1,16 @@
-# 📝 Task API – Gerenciador de Tarefas (API REST)
+<div align="center">
+
+<img src="https://img.shields.io/badge/Itaú%20Project-v0.0.1-f97316?style=for-the-badge&logoColor=white" />
+<img src="https://img.shields.io/badge/Status-Concluído-22c55e?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Licença-MIT-60a5fa?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+<img src="https://img.shields.io/badge/Spring%20Boot-3.3.2-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
+<img src="https://img.shields.io/badge/Maven-Build-02303A?style=for-the-badge&logo=maven&logoColor=white" />
+
+</div>
+
+---
+#  Task API – Gerenciador de Tarefas (API REST)
 
 Uma **API RESTful** desenvolvida em **Java com Spring Boot** para gerenciamento de tarefas, seguindo boas práticas de arquitetura, uso de DTOs, tratamento de exceções e organização em camadas.
 
@@ -40,139 +52,10 @@ Projeto ideal para estudo e portfólio, focado na transição de **MVC tradicion
 * **OpenApi docs Spring** (testes da API)
 * **railway** (Para deploy da API)
 
----
 
-## Estrutura do projeto
 
-```
-com.example.taskapi
-│
-├── controller
-│   └── TaskController.java
-│
-├── service
-│   ├── TaskService.java
-│   └── impl
-│       └── TaskServiceImpl.java
-│
-├── repository
-│   └── TaskRepository.java
-│
-├── dto
-│   ├── TaskCreateDTO.java
-│   ├── TaskUpdateDTO.java
-│   ├── TaskResponseDTO.java
-│   └── TaskListDTO.java
-│
-├── model
-│   └── Task.java
-│
-├── exception
-│   └── GlobalExceptionHandler.java
-│
-└── TaskApiApplication.java
-```
 
----
+<div align="center">
+  Feito por <strong>Samuel-Dev</strong> 🚀
+</div>
 
-##  Modelo da entidade Task
-
-* **id**
-* **title**
-* **description**
-* **status** (PENDENTE, CONCLUIDA)
-* **createdAt**
-* **updatedAt**
-
----
-
-##  Endpoints principais
-
-| Método | Endpoint                  | Descrição                 |
-| ------ | ------------------------- | ------------------------- |
-| POST   | `/tasks`                  | Criar nova tarefa         |
-| GET    | `/tasks`                  | Listar todas as tarefas   |
-| GET    | `/tasks/{id}`             | Buscar tarefa por ID      |
-| PUT    | `/tasks/{id}`             | Atualizar tarefa          |
-| DELETE | `/tasks/{id}`             | Remover tarefa            |
-| GET    | `/tasks/status/concluida` | Listar tarefas concluídas |
-
----
-
-##  Exemplo de requisição (POST)
-
-```json
-{
-  "title": "Estudar Spring Boot",
-  "description": "Criar uma API REST completa",
-  "status": "PENDENTE"
-}
-```
-
----
-
-##  Exemplo de resposta (Response DTO)
-
-```json
-{
-  "id": 1,
-  "title": "Estudar Spring Boot",
-  "description": "Criar uma API REST completa",
-  "status": "PENDENTE",
-  "createdAt": "2025-12-23T20:10:00"
-}
-```
-
----
-
-##  Como executar o projeto
-
-1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/task-api.git
-```
-
-2. Configure o banco de dados no `application.yml` ou `application.properties`
-
-3. Execute o projeto
-
-```bash
-mvn spring-boot:run
-```
-ou
-Entre nesse link para teste -> https://managementtask-production.up.railway.app/swagger-ui/index.html 
-se tiver problema o railway deve ter fechado. 
-4. Teste os endpoints via Postman ou Insomnia
-
----
-
-##  Objetivo do projeto
-
-Este projeto foi desenvolvido com foco em:
-
-* Fixar conceitos de **API REST com Spring Boot**
-* Entender a diferença entre **MVC e REST**
-* Praticar **DTOs, Services e Repositories**
-* Criar um projeto organizado e apresentável para **portfólio**
-
----
-
-##  Próximas melhorias
-
-*  Autenticação com JWT
-*  Paginação e ordenação
-*  Testes unitários
-*  Documentação com Swagger
-*  Integração com front-end (React)
-
----
-
-##  Autor
-
-**Samuel Duarte Alves**
-Estudante de Engenharia de Software | Java | Spring Boot | API REST
-
----
-
- Se este projeto te ajudou, deixe uma estrela no repositório!
